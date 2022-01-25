@@ -27,3 +27,10 @@ body {
 .screen-text {
   font-size: 24px;
 }
+
+.clear-btns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
