@@ -19,4 +19,11 @@ body {
   margin-right: 15px;
   height: 50px;
   background-color: white;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.screen-text {
+  font-size: 24px;
 }
