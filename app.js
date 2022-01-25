@@ -5,6 +5,10 @@ const subtract = (a, b) => parseFloat(a) - parseFloat(b);
 const multiply = (a, b) => parseFloat(a) * parseFloat(b);
 
 const divide = (a, b) => {
+  if (a === 0) {
+    return 0;
+  }
+
   if (b === 0) {
     return "Error";
   } else {
