@@ -73,4 +73,12 @@ const operate = (operator, num1, num2) => {
   result = calculator.firstNumber;
 };
 
+const clearScreen = () => {
+  screenText.textContent = "";
+  calculator.firstNumber = null;
+  calculator.secondNumber = null;
+  calculator.operator = null;
+};
+
+clearButton.addEventListener("click", clearScreen);
 equalsButton.addEventListener("click", operate);
