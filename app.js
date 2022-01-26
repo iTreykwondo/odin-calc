@@ -52,7 +52,6 @@ const operate = (operator, num1, num2) => {
   num1 = Number(calculator.firstNumber);
   num2 = Number(calculator.secondNumber);
   let result;
-
   switch (operator) {
     case "+":
       result = add(num1, num2);
