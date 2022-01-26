@@ -6,10 +6,15 @@ const equalsButton = document.querySelector(".equals");
 const decimal = document.querySelector(".decimal");
 const operators = document.querySelectorAll(".operator");
 
+const calculator = {
+  operator: null,
+  firstNumber: null,
+  secondNumber: null,
+  decimal: false,
+};
+
 const add = (a, b) => parseFloat(a) + parseFloat(b);
-
 const subtract = (a, b) => parseFloat(a) - parseFloat(b);
-
 const multiply = (a, b) => parseFloat(a) * parseFloat(b);
 
 const divide = (a, b) => {
@@ -42,6 +47,3 @@ const operate = (operator, num1, num2) => {
       "An error occured.";
   }
 };
-
-// 1. Add event listener to all operator buttons
-// 2. set the caclulator.operator = operator button's text content
