@@ -13,6 +13,24 @@ const calculator = {
   decimal: false,
 };
 
+numberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    screenText.textContent += button.textContent;
+
+    if (calculator.firstNumber !== null && calculator.operator !== null) {
+      calculator.secondNumber = screenText.textContent;
+    }
+  });
+});
+
+operators.forEach((operator) => {
+  operator.addEventListener("click", () => {
+    calculator.firstNumber = screenText.textContent;
+    calculator.operator = operator.textContent;
+    screenText.textContent = "";
+  });
+});
+
 const add = (a, b) => parseFloat(a) + parseFloat(b);
 const subtract = (a, b) => parseFloat(a) - parseFloat(b);
 const multiply = (a, b) => parseFloat(a) * parseFloat(b);
@@ -30,20 +48,28 @@ const divide = (a, b) => {
 };
 
 const operate = (operator, num1, num2) => {
+  operator = calculator.operator;
+  num1 = Number(calculator.firstNumber);
+  num2 = Number(calculator.secondNumber);
+  let result;
+
   switch (operator) {
     case "+":
-      add(num1, num2);
+      result = add(num1, num2);
       break;
     case "-":
-      subtract(num1, num2);
+      result = subtract(num1, num2);
       break;
     case "*":
-      multiply(num1, num2);
+      result = multiply(num1, num2);
       break;
     case "/":
-      divide(num1, num2);
+      result = divide(num1, num2);
       break;
     default:
       "An error occured.";
   }
+  return (screenText.textContent = `${result}`);
 };
+
+equalsButton.addEventListener("click", operate);
