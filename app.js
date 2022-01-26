@@ -1,3 +1,11 @@
+let screenText = document.querySelector(".screen-text");
+const clearButton = document.querySelector(".clear");
+const deleteButton = document.querySelector(".delete");
+const numberButtons = document.querySelectorAll(".btn");
+const equalsButton = document.querySelector(".equals");
+const decimal = document.querySelector(".decimal");
+const operators = document.querySelectorAll(".operator");
+
 const add = (a, b) => parseFloat(a) + parseFloat(b);
 
 const subtract = (a, b) => parseFloat(a) - parseFloat(b);
@@ -34,3 +42,6 @@ const operate = (operator, num1, num2) => {
       "An error occured.";
   }
 };
+
+// 1. Add event listener to all operator buttons
+// 2. set the caclulator.operator = operator button's text content
