@@ -40,7 +40,7 @@ const divide = (a, b) => {
     return 0;
   }
   if (b === 0) {
-    return "Error";
+    return (screenText.textContent = "Error");
   }
   return parseFloat(a) / parseFloat(b);
 };
