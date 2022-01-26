@@ -6,3 +6,4 @@ This is the third project on [The Odin Project](https://www.theodinproject.com/p
 
 - The ability for the user to input decimal numbers
 - The ability for the user to enter negative numbers
+- The ability for the user to backspace a character
