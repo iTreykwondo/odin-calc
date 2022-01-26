@@ -69,7 +69,9 @@ const operate = (operator, num1, num2) => {
     default:
       "An error occured.";
   }
-  return (screenText.textContent = `${result}`);
+
+  screenText.textContent = `${result}`;
+  result = calculator.firstNumber;
 };
 
 equalsButton.addEventListener("click", operate);
