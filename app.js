@@ -39,12 +39,10 @@ const divide = (a, b) => {
   if (a === 0) {
     return 0;
   }
-
   if (b === 0) {
     return "Error";
-  } else {
-    parseFloat(a) / parseFloat(b);
   }
+  return parseFloat(a) / parseFloat(b);
 };
 
 const operate = (operator, num1, num2) => {
